@@ -93,9 +93,9 @@
     </header>
     <main class="container mx-auto">
       <!-- Banner part start -->
-      <div class="carousel mt-14 w-full">
+      <div class="carousel mt-14 w-full relative">
         <div id="slide1" class="carousel-item relative w-full">
-          <!-- images overlay start -->
+          <!-- images one overlay start -->
           <div
             class="hero min-h-screen"
             style="background-image: url(images/b1.png)"
@@ -117,7 +117,7 @@
               </div>
             </div>
           </div>
-          <!-- images overlay end -->
+          <!-- images two overlay end -->
           <div
             class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
           >
@@ -126,7 +126,7 @@
           </div>
         </div>
         <div id="slide2" class="carousel-item relative w-full">
-          <!-- images overlay start -->
+          <!-- images three overlay start -->
           <div
             class="hero min-h-screen"
             style="background-image: url(images/b2.png)"
@@ -148,7 +148,7 @@
               </div>
             </div>
           </div>
-          <!-- images overlay end -->
+          <!-- images four overlay end -->
           <div
             class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
           >
@@ -157,7 +157,7 @@
           </div>
         </div>
         <div id="slide3" class="carousel-item relative w-full">
-          <!-- images overlay start -->
+          <!-- images five overlay start -->
           <div
             class="hero min-h-screen"
             style="background-image: url(images/b3.png)"
@@ -188,7 +188,7 @@
           </div>
         </div>
         <div id="slide4" class="carousel-item relative w-full">
-          <!-- images overlay start -->
+          <!-- images sex overlay start -->
           <div
             class="hero min-h-screen"
             style="background-image: url(images/b4.png)"
@@ -220,6 +220,34 @@
         </div>
       </div>
       <!-- Banner part end -->
+
+      <!-- fruits cart part start -->
+      <div class="flex hidden lg:block -mt-32 absolute z-10 left-0 right-0 mx-auto">
+        <div class="bg-slate-100 rounded-2xl w-[1196px] h-[250px] mx-auto flex gap-24 justify-center items-center">
+          <div class="text-center">
+            <img src="images/f1.png" alt="" />
+            <h3 class="font-medium text-xl mt-4">Strawberry</h3>
+          </div>
+          <div class="text-center">
+            <img src="images/f2.png" alt="" />
+            <h3 class="font-medium text-xl mt-4">Strawberry</h3>
+          </div>
+          <div class="text-center">
+            <img src="images/f3.png" alt="" />
+            <h3 class="font-medium text-xl mt-4">Strawberry</h3>
+          </div>
+          <div class="text-center">
+            <img src="images/f4.png" alt="" />
+            <h3 class="font-medium text-xl mt-4">Strawberry</h3>
+          </div>
+          <div class="text-center">
+            <img src="images/f5.png" alt="" />
+            <h3 class="font-medium text-xl mt-4">Strawberry</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- fruits cart part end -->
 
       <!-- Deal of the day part start -->
       <section class="my-64">
@@ -315,16 +343,63 @@
                 />
               </div>
               <div class="card-actions">
-                <button class="text-[#F85559] font-bold text-lg">
-                  <a href="#">Details</a>
+                <button onclick="my_modal_2.showModal()" class="text-[#F85559] font-bold text-lg">
+                  <a href="">Details</a>
                 </button>
+                
+                <!-- Modal set -->
+                <dialog id="my_modal_2" class="modal">
+                    <form method="dialog" class="modal-box">
+                      <!-- Modal cart -->
+                      <div class="card w-96 bg-base-100 shadow-xl border">
+                        <figure class="px-10 pt-10">
+                          <img src="images/c1.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                          <p>Apples</p>
+                          <!-- reating -->
+                          <div class="rating mt-6 mb-8">
+                            <input
+                              type="radio"
+                              name="rating-2"
+                              class="mask mask-star-2 bg-orange-400"
+                            />
+                            <input
+                              type="radio"
+                              name="rating-2"
+                              class="mask mask-star-2 bg-orange-400"
+                              checked
+                            />
+                            <input
+                              type="radio"
+                              name="rating-2"
+                              class="mask mask-star-2 bg-orange-400"
+                            />
+                            <input
+                              type="radio"
+                              name="rating-2"
+                              class="mask mask-star-2 bg-orange-400"
+                            />
+                            <input
+                              type="radio"
+                              name="rating-2"
+                              class="mask mask-star-2 bg-orange-400"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                    </form>
+                  </dialog>
+
               </div>
             </div>
           </div>
           <!-- card two -->
           <div class="card w-96 bg-base-100 shadow-xl border">
             <figure class="px-10 pt-10">
-              <img src="images/c1.png" alt="Shoes" class="rounded-xl" />
+              <img src="images/c2.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title font-bold text-2xl mt-12 mb-6">
@@ -361,16 +436,27 @@
                 />
               </div>
               <div class="card-actions">
-                <button class="text-[#F85559] font-bold text-lg">
-                  <a href="#">Details</a>
+                <button onclick="my_modal_2.showModal()" class="text-[#F85559] font-bold text-lg">
+                  <a href="">Details</a>
                 </button>
+                <!-- Modal set -->
+                <!-- <dialog id="my_modal_2" class="modal">
+                    <form method="dialog" class="modal-box">
+                      <h3 class="font-bold text-lg">Hello!</h3>
+                      <p class="py-4">Press ESC key or click outside to close</p>
+                    </form>
+                    <form method="dialog" class="modal-backdrop">
+                      <button>close</button>
+                    </form>
+                  </dialog> -->
+                  
               </div>
             </div>
           </div>
           <!-- card three -->
           <div class="card w-96 bg-base-100 shadow-xl border">
             <figure class="px-10 pt-10">
-              <img src="images/c1.png" alt="Shoes" class="rounded-xl" />
+              <img src="images/c3.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title font-bold text-2xl mt-12 mb-6">
@@ -407,16 +493,27 @@
                 />
               </div>
               <div class="card-actions">
-                <button class="text-[#F85559] font-bold text-lg">
-                  <a href="#">Details</a>
+                <button onclick="my_modal_2.showModal()" class="text-[#F85559] font-bold text-lg">
+                  <a href="">Details</a>
                 </button>
+                <!-- Modal set -->
+                <!-- <dialog id="my_modal_2" class="modal">
+                    <form method="dialog" class="modal-box">
+                      <h3 class="font-bold text-lg">Hello!</h3>
+                      <p class="py-4">Press ESC key or click outside to close</p>
+                    </form>
+                    <form method="dialog" class="modal-backdrop">
+                      <button>close</button>
+                    </form>
+                  </dialog> -->
+
               </div>
             </div>
           </div>
           <!-- card four -->
           <div class="card w-96 bg-base-100 shadow-xl border">
             <figure class="px-10 pt-10">
-              <img src="images/c1.png" alt="Shoes" class="rounded-xl" />
+              <img src="images/c4.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title font-bold text-2xl mt-12 mb-6">
@@ -453,9 +550,20 @@
                 />
               </div>
               <div class="card-actions">
-                <button class="text-[#F85559] font-bold text-lg">
-                  <a href="#">Details</a>
+                <button onclick="my_modal_2.showModal()" class="text-[#F85559] font-bold text-lg">
+                  <a href="">Details</a>
                 </button>
+                <!-- Modal set -->
+                <!-- <dialog id="my_modal_2" class="modal">
+                    <form method="dialog" class="modal-box">
+                      <h3 class="font-bold text-lg">Hello!</h3>
+                      <p class="py-4">Press ESC key or click outside to close</p>
+                    </form>
+                    <form method="dialog" class="modal-backdrop">
+                      <button>close</button>
+                    </form>
+                  </dialog> -->
+
               </div>
             </div>
           </div>
@@ -600,7 +708,9 @@
               </div>
             </div>
             <!-- two -->
-            <div class="md:flex text-center justify-center items-center gap-6 my-12">
+            <div
+              class="md:flex text-center justify-center items-center gap-6 my-12"
+            >
               <div class="">
                 <i
                   class="fa-sharp fa-regular fa-heart text-4xl bg-[#121212] p-5 rounded-full"
@@ -643,7 +753,9 @@
 
         <!-- Right site card -->
         <div dir="rtl">
-          <div class="md:flex text-center justify-center items-center gap-6 rtl:mr-3">
+          <div
+            class="md:flex text-center justify-center items-center gap-6 rtl:mr-3"
+          >
             <div class="">
               <i
                 class="fa-sharp fa-solid fa-people-group text-4xl bg-[#121212] p-5 rounded-full"
@@ -660,7 +772,9 @@
             </div>
           </div>
           <!-- two -->
-          <div class="md:flex text-center justify-center items-center gap-6 my-12">
+          <div
+            class="md:flex text-center justify-center items-center gap-6 my-12"
+          >
             <div class="">
               <i
                 class="fa-sharp fa-regular fa-heart text-4xl bg-[#121212] p-5 rounded-full"
@@ -708,7 +822,9 @@
       </div>
 
       <div>
-        <ul class="flex flex-wrap md:flex-nowrap justify-center items-center gap-14 px-9 ">
+        <ul
+          class="flex flex-wrap md:flex-nowrap justify-center items-center gap-14 px-9"
+        >
           <li class="font-semibold text-lg">Home</li>
           <li class="font-semibold text-lg">About Us</li>
           <li class="font-semibold text-lg">Shop</li>
