@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Burst</title>
+    <!-- Tailwind and Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawasome icon -->
+    <script
+      src="https://kit.fontawesome.com/5d6dbab9aa.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .font-lato {
+        font-family: "Lato", sans-serif;
+      }
+      .container {
+        width: 1440px;
+      }
+    </style>
+  </head>
+  <body class="font-lato">
+    <header class="container mx-auto mt-4">
+      <!-- Navbar start -->
+      <div
+        class="navbar rounded-full md:bg-[#F85559] lg:p-7 flex justify-between"
+      >
+        <div class="hidden md:block">
+          <ul class="flex sm:gap-2 lg:gap-7">
+            <li class="md:font-medium md:text-lg text-white">
+              <a href="#">Home</a>
+            </li>
+            <li class="md:font-medium md:text-lg text-white">
+              <a href="#">About</a>
+            </li>
+            <li class="md:font-medium md:text-lg text-white">
+              <a href="#">Shop</a>
+            </li>
+            <li class="md:font-medium md:text-lg text-white">
+              <a href="#">Fruits</a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <img src="images/logo.png" alt="" />
+          <a class="btn btn-ghost normal-case md:text-white text-4xl"
+            >Fruit Burst</a
+          >
+        </div>
+        <div class="gap-2">
+          <div class="hidden md:block">
+            <input
+              type="text"
+              placeholder="Search"
+              class="input input-bordered rounded-full sm:w-auto lg:w-96"
+            />
+          </div>
+          <!-- bar -->
+          <!-- dropdown -->
+          <div class="dropdown dropdown-end">
+            <label
+              tabindex="0"
+              class="btn btn-ghost btn-circle avatar md:hidden font-lg  text-3xl"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul
+              tabindex="0"
+              class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between"> Home </a>
+              </li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar end -->
+
+      <!-- Banner part start -->
+
+      <div class="carousel w-full mt-14">
+        <div id="slide1" class="carousel-item relative w-full">
+          <!-- images overlay start -->
+          <div
+            class="hero min-h-screen"
+            style="background-image: url(images/b1.png)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-2xl">
+                <h1 class="mb-5 text-7xl text-white font-extrabold">
+                  Exotic tastes at your doorstep
+                </h1>
+                <p class="mb-5 font-medium text-xl">
+                  We supply highly quality organic products
+                </p>
+                <button
+                  class="p-5 bg-[#F85559] rounded-md font-extrabold text-xl text-white"
+                >
+                  Shop Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- images overlay end -->
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <!-- images overlay start -->
+          <div
+            class="hero min-h-screen"
+            style="background-image: url(images/b2.png)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-2xl">
+                <h1 class="mb-5 text-7xl text-white font-extrabold">
+                  Exotic tastes at your doorstep
+                </h1>
+                <p class="mb-5 font-medium text-xl">
+                  We supply highly quality organic products
+                </p>
+                <button
+                  class="p-5 bg-[#F85559] rounded-md font-extrabold text-xl text-white"
+                >
+                  Shop Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- images overlay end -->
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <!-- images overlay start -->
+          <div
+            class="hero min-h-screen"
+            style="background-image: url(images/b3.png)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-2xl">
+                <h1 class="mb-5 text-7xl text-white font-extrabold">
+                  Exotic tastes at your doorstep
+                </h1>
+                <p class="mb-5 font-medium text-xl">
+                  We supply highly quality organic products
+                </p>
+                <button
+                  class="p-5 bg-[#F85559] rounded-md font-extrabold text-xl text-white"
+                >
+                  Shop Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- images overlay end -->
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+          <!-- images overlay start -->
+          <div
+            class="hero min-h-screen"
+            style="background-image: url(images/b4.png)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-2xl">
+                <h1 class="mb-5 text-7xl text-white font-extrabold">
+                  Exotic tastes at your doorstep
+                </h1>
+                <p class="mb-5 font-medium text-xl">
+                  We supply highly quality organic products
+                </p>
+                <button
+                  class="p-5 bg-[#F85559] rounded-md font-extrabold text-xl text-white"
+                >
+                  Shop Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- images overlay end -->
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner part end -->
+
+      <!-- Deal of the day part start -->
+      <section class="my-64">
+        <div class="lg:flex lg:justify-between text-center lg:text-start mb-12">
+          <div class="lg:w-[615px]">
+            <h3 class="text-[#121212] font-extrabold text-5xl">
+              Deal of the day
+            </h3>
+            <p class="text-[#12121299] font-medium text-lg mt-6">
+              Contrary to popular belief, is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old.
+            </p>
+          </div>
+          <div>
+            <div class="grid grid-flow-col items-center justify-center gap-5 auto-cols-max mt-10 lg:mt-0">
+              <div class="flex flex-col">
+                <span
+                  class="countdown font-mono text-5xl flex items-center justify-center gap-3"
+                >
+                  <span style="--value: 29"></span>
+                  <i class="fa-solid fa-ellipsis-vertical text-2xl"></i>
+                </span>
+                days
+              </div>
+              <div class="flex flex-col">
+                <span
+                  class="countdown font-mono text-5xl flex items-center justify-center gap-3"
+                >
+                  <span style="--value: 10"></span>
+                  <i class="fa-solid fa-ellipsis-vertical text-2xl"></i>
+                </span>
+                hours
+              </div>
+              <div class="flex flex-col">
+                <span
+                  class="countdown font-mono text-5xl flex items-center justify-center gap-3"
+                >
+                  <span style="--value: 24"></span>
+                  <i class="fa-solid fa-ellipsis-vertical text-2xl"></i>
+                </span>
+                min
+              </div>
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span style="--value: 46"></span>
+                </span>
+                sec
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- deal card start -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- card one -->
+          <div class="card w-96 bg-base-100 shadow-xl border">
+            <figure class="px-10 pt-10">
+              <img src="images/c1.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-bold text-2xl mt-12 mb-6">
+                12.90$ - 18.85$
+              </h2>
+              <p>Apples</p>
+              <!-- reating -->
+              <div class="rating mt-6 mb-8">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <div class="card-actions">
+                <button class="text-[#F85559] font-bold text-lg">
+                  <a href="#">Details</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card two -->
+          <div class="card w-96 bg-base-100 shadow-xl border ">
+            <figure class="px-10 pt-10">
+              <img src="images/c1.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-bold text-2xl mt-12 mb-6">
+                12.90$ - 18.85$
+              </h2>
+              <p>Apples</p>
+              <!-- reating -->
+              <div class="rating mt-6 mb-8">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <div class="card-actions">
+                <button class="text-[#F85559] font-bold text-lg">
+                  <a href="#">Details</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card three -->
+          <div class="card w-96 bg-base-100 shadow-xl border ">
+            <figure class="px-10 pt-10">
+              <img src="images/c1.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-bold text-2xl mt-12 mb-6">
+                12.90$ - 18.85$
+              </h2>
+              <p>Apples</p>
+              <!-- reating -->
+              <div class="rating mt-6 mb-8">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <div class="card-actions">
+                <button class="text-[#F85559] font-bold text-lg">
+                  <a href="#">Details</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card four -->
+          <div class="card w-96 bg-base-100 shadow-xl border ">
+            <figure class="px-10 pt-10">
+              <img src="images/c1.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-bold text-2xl mt-12 mb-6">
+                12.90$ - 18.85$
+              </h2>
+              <p>Apples</p>
+              <!-- reating -->
+              <div class="rating mt-6 mb-8">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <div class="card-actions">
+                <button class="text-[#F85559] font-bold text-lg">
+                  <a href="#">Details</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="flex justify-center items-center mt-12">
+            <button
+          class="p-5 bg-[#F85559] rounded-md font-extrabold  text-xl text-white"
+        >
+          Shop Now
+        </button>
+        </div>
+
+        <!-- deal cart end -->
+      </section>
+      <!-- Deal of the day part end -->
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>
